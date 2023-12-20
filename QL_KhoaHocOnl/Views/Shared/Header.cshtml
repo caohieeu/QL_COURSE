@@ -1,0 +1,93 @@
+﻿<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img style="width:150px;" src="~/Assets/images/logoIT.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-host">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/home/index">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/course/index">Khóa học</a></li>
+                    <li id="callTeacher" class="nav-item"><a class="nav-link" href="/teacher/teacherapi">Giảng viên</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/index">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/index">Liên hệ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Cart/Cart">
+                            <i class="bi bi-cart3 position-relative" style="font-size: 1.4em;">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6">
+                                    @{ if (Session["Quantity"] == null)
+                                        {
+                                            <span>0</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@Session["Quantity"]</span>
+                                        }
+                                    }
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item" style="margin-top:5px">
+                        <form class="d-flex flex-row flex-wrap"
+                              action="/course/index">
+                            <input type="search"
+                                   class="form-control w-auto"
+                                   id="search"
+                                   name="search"
+                                   value="@ViewBag.TB"
+                                   placeholder="Search" />
+                            <button type="submit" class="btn btn-primary mx-2">Search</button>
+                        </form>
+                    </li>
+                    @if (Request.Cookies["User"] != null)
+                    {
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <div class="avatar avatar-md"><img style="width:50px; height:50px; border-radius:50%" class="avatar-img" src="~/Assets/Clients/assets/img/avatars/8.jpg" alt="user@email.com"></div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end pt-0 " style="padding:10px 0; left:-60px!important">
+                                <div class="dropdown-header bg-light py-2">
+                                    <div class="fw-semibold text-white">Tài khoản</div>
+                                </div>
+                                <a class="dropdown-item" href="/account/detailuser?id=@Int32.Parse(Request.Cookies["User"]["ID"])">
+                                    <svg style="width:20px; height:20px" class="icon me-2">
+                                        <use xlink:href="~/Assets/Clients/vendors/coreui/icons/svg/free.svg#cil-user"></use>
+                                    </svg> Thông tin
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/account/Logout">
+                                    <svg style="width:20px; height:20px" class="icon me-2">
+                                        <use xlink:href="~/Assets/Clients/vendors/coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                    </svg> Đăng xuất
+                                </a>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/account/login">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/account/Register">Đăng ký</a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

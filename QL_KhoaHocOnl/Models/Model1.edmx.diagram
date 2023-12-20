@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="900775cfc7fc4956a80b8b104f6e32f4" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.Answer" Width="1.5" PointX="12.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.ARTICLE" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.CART_OF_USER" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.Choice" Width="1.5" PointX="12.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.COMMENT_LESSON" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.COURSE" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.FEEDBACK" Width="1.5" PointX="10.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.GRADE" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.LESSON" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.ORDER_COURSE" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.Question" Width="1.5" PointX="10.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.Quiz" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.QuizResult" Width="1.5" PointX="10.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.sysdiagram" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.TEACHER" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.TYPE_COURSE" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_COURSE_TESTModel.USER_COURSE" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_Answers_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_ARTICLE_USER" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_CART_OF_USER_USER_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_Choices_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_CM_LS" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_COURSE_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_COURSE_TYPE_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_GRADES_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_LESSON_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.ORDER_COURSE_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_FEEDBACK_ORDER_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_GRADES_USER_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_QuizResult_OrderCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.ORDER_COURSE_USER_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_Questions_Quiz" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_COURSE_TESTModel.FK_QuizResult_Quiz" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
